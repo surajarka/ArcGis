@@ -1,6 +1,5 @@
 import React,{ReactElement} from 'react';
-import { Container, Card, Button } from 'react-bootstrap';
-import { propTypes } from 'react-bootstrap/esm/Image';
+import { Container } from 'react-bootstrap';
 import Map from './Map'
 
 

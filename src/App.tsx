@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import Map from "@arcgis/core/Map";
+import { Link } from 'react-router-dom';
 
 import 'bootstrap/dist/css/bootstrap.min.css'; // bootstrap add
 
@@ -21,9 +21,9 @@ function App() {
 		<Router>
 			<React.Suspense fallback={loading}>
 				<Switch>
-						<PublicRoute path="/" exact component={(props:any) => <TheLayout {...props} />} />
-						<PublicRoute path="/home" exact name="Home" component={(props:any) => <TheLayout {...props} />} />
-						<Route component={() => (<div>404 Not found </div>)} />
+					<PublicRoute path="/" exact component={(props: any) => <TheLayout {...props} />} />
+					<PublicRoute path="/home" exact name="Home" component={(props: any) => <TheLayout {...props} />} />
+					<Route component={() => (<><div>404 Not found </div><Link to="/" className="btn btn-success">Home</Link></>)} />
 				</Switch>
 			</React.Suspense>
 		</Router>
